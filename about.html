@@ -5,21 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Planner | MealMate</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
     <header class="site-header bg-orange-100 top-0 -30">
-        <nav class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4" aria-label="Main navigation">
-        <a href="index.html" class="logo text-2xl text-amber-950 font-bold tracking-tight">MealMate</a>
-         <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="recipes.html">Recipes</a>
-          <a class="nav-link" href="budget_planner.html">Budget Planner</a>
-          <a class="nav-link active" href="about.html">About</a>
-         </div>
-        </nav>
+        <nav class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4"
+     aria-label="Main navigation">
+
+  <a href="index.html"
+     class="logo text-2xl text-amber-950 font-bold tracking-tight">
+    MealMate
+  </a>
+
+  <button id="menuBtn"
+          type="button"
+          class="md:hidden text-2xl text-amber-950 p-2"
+          aria-label="Toggle navigation"
+          aria-controls="navMenu"
+          aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <div id="navMenu"
+       class="hidden w-full flex-col items-center gap-4 md:flex md:w-auto md:flex-row">
+
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="recipes.html">Recipes</a>
+    <a class="nav-link" href="budget_planner.html">Budget Planner</a>
+    <a class="nav-link active" href="about.html">About</a>
+
+  </div>
+</nav>
+
     </header>
 
     <section class="bg-amber-50 px-8 py-8 md:py-8">

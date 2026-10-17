@@ -1,5 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+menuBtn.addEventListener("click", () => {
+  navMenu.classList.toggle("hidden");
+
+  const isOpen = !navMenu.classList.contains("hidden");
+
+  menuBtn.setAttribute("aria-expanded", isOpen);
+  menuBtn.innerHTML = isOpen
+    ? '<i class="fa-solid fa-xmark"></i>'
+    : '<i class="fa-solid fa-bars"></i>';
+});
+
+
   // ---------- Search + category filter ----------
   const searchInput = document.querySelector("#searchInput");
   const categoryFilter = document.querySelector("#mealtype");
