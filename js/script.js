@@ -257,9 +257,9 @@ document.addEventListener("DOMContentLoaded", () => {
         message.textContent = `Careful! You've used ${Math.round(percent)}% of your budget. ${peso(remaining)} left.`;
         message.style.color = "#c2410c";
       } else {
-        progress.style.backgroundColor = "#16a34a";
+        progress.style.backgroundColor = "#e17e5d";
         message.textContent = `You're on track! ${peso(remaining)} left (${Math.round(percent)}% used).`;
-        message.style.color = "#15803d";
+        message.style.color = "#e17e5d";
       }
     }
 
