@@ -54,21 +54,72 @@
         <h1 class="text-xl font-bold text-amber-950">Our Mission</h1>
         <p class="text-2lg text-slate-800 mt-2">MealMate was created to help people living in boarding houses, dorms, and homes find easy and budget-friendly recipes.
              We share simple cooking techniques and encourage thoughtful meal planning so delicious food can fit different budgets.</p>
-            <div class="rounded-2xl bg-orange-50 p-4 mt-6 ">
-                <p class="note text-2xl text-slate-800 text-center mt-4 mb-4">“Good food doesn't have to be expensive.<br> It just has to be delicious.”</p>
+            <div class="rounded-2xl bg-orange-50 p-4 mt-6 items-stretch">
+                
+<section class="max-w-4xl mx-auto p-4">
+  <div class="relative overflow-hidden rounded-2xl shadow-lg">
+
+    <!-- Images -->
+    <div id="carouselImages" class="relative">
+      <img
+        src="images/pakbet.jpg"
+        class="carousel-image w-full h-65 md:h-96 object-cover">
+
+      <img
+        src="images/food.png"
+        class="carousel-image hidden w-full h-65 md:h-96 object-cover">
+
+      <img
+        src="images/kitchen.jpg"
+        class="carousel-image hidden w-full h-65 md:h-96 object-cover">
+    </div>
+
+    <!-- Dark overlay and text -->
+    <div class="absolute inset-0 bg-black/30 flex items-end p-6 md:p-10">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">
+          Simple Meals, Happy Wallet
+        </h2>
+        <p class="mt-2 text-white">
+          Discover delicious meals without spending too much.
+        </p>
+      </div>
+    </div>
+
+    <!-- Previous button -->
+    <button
+      id="prevBtn"
+      type="button"
+      aria-label="Previous image"
+      class="absolute left-3 top-1/2 -translate-y-1/2
+             rounded-full bg-white/80 hover:bg-white
+             w-10 h-10 text-amber-950 text-2xl"> &#8249;</button>
+
+    <!-- Next button -->
+    <button
+      id="nextBtn"
+      type="button"
+      aria-label="Next image"
+      class="absolute right-3 top-1/2 -translate-y-1/2
+             rounded-full bg-white/80 hover:bg-white
+             w-10 h-10 text-amber-950 text-2xl">&#8250;</button>
+
+  </div>
+</section>
+                <p class="note text-2xl text-slate-800 text-center mt-2">“Good food doesn't have to be expensive.<br> It just has to be delicious.”</p>
             </div>
     </div>
 
      <div class="h-full rounded-2xl border border-amber-100  p-8">
         <h1 class="text-xl font-bold text-amber-950">Contact Us</h1>
-        <p class="text-2lg text-slate-800">Have questions, suggestions or recipe requests? We'd love to hear from you!</p>
-        <label class="mt-2 mb-1 block font-medium">Name</label>
+        <p class="text-2lg text-slate-800 mt-2">Have questions, suggestions or recipe requests? We'd love to hear from you!</p>
+        <label class="mt-4 mb-2 block font-medium">Name</label>
         <input type="text" required placeholder="Full name" class="w-full rounded-2xl border border-amber-100 p-3 outline-none focus:border-amber-900">
-         <label class="mt-2 mb-1 block font-medium">Email</label>
+         <label class="mt-2 mb-2 block font-medium">Email</label>
         <input type="text" required placeholder="name@gmail.com" class="w-full rounded-2xl border border-amber-100 p-3 outline-none focus:border-amber-900">
-         <label class="mt-2 mb-1 block font-medium">Message</label>
-        <input type="text" required placeholder="Your message..." class="w-full rounded-2xl border border-amber-100 p-3 outline-none focus:border-amber-900">
-        <button class="w-full bg-amber-700/80 text-white font-semibold py-2 mt-6 rounded-full hover:bg-amber-700">Send Message</button>
+         <label class="mt-2 mb-2 block font-medium">Message</label>
+       <textarea rows="4" placeholder="Write your message here..." class="w-full min-h-32 px-4 py-3 rounded-2xl border border-amber-100 focus:border-amber-900 resize-y"></textarea>
+<button class="w-full bg-amber-700/80 text-white font-semibold py-2 mt-6 rounded-full hover:bg-amber-700">Send Message</button>
     </div>
 
     </section>    
