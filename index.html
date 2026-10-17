@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | MealMate</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header bg-orange-100 top-0 -30">
+        <nav class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4" aria-label="Main navigation">
+        <a href="index.html" class="logo text-2xl text-amber-950 font-bold tracking-tight"> MealMate</a>
+         <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link hover:text-gray-500" href="recipes.html">Recipes</a>
+          <a class="nav-link hover:text-gray-500" href="budget_planner.html">Budget Planner</a>
+          <a class="nav-link hover:text-gray-500" href="about.html">About</a>
+         </div>
+        </nav>
+    </header>
+
+    <section class="grid md:grid-cols-2 gap-10 items-center bg-amber-50 px-8 py-12 md:py-20">
+        <div>
+            <h1 class="text-5xl font-bold text-amber-900">Delicious Meals,<br> Without Spending More.</h1>
+            <p class="mt-4 text-3lg text-slate-800">Simple, affordable recipes for everyday meals.</p>
+            <p class="mb-10 text-3lg text-slate-800">Good food is always within reach!</p>
+            <a class="bg-amber-700 text-white text-lg font-semibold tracking-tight py-4 px-6 rounded-full hover:bg-amber-700/80" href="recipes.html">Explore Recipes →</a>
+        </div>
+        <div>
+            <img id="heroCarouselImage" class="hero-image h-100 w-160 rounded-lg" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=85" alt="A colorful home-cooked meal">
+        </div>
+    </section>
+
+<section class="py-8 px-8">
+
+    <div class="flex flex-wrap justify-between items-end gap-3 mb-6">
+        <p class="text-lg font-medium">Popular Recipes</p>
+        <a href="recipes.html" class="font-semibold hover:underline">See all recipes →</a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
+        <!-- Recipe 1 -->
+        <article class="surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+            data-recipe-card
+            data-name="Tortang Talong"
+            data-category="ulam"
+            data-price="25–₱40"
+            data-ingredients="eggplant egg salt oil"
+            data-ingredients-list="3 pcs eggplant (talong)|2 pcs eggs|1/2 tsp salt|Pinch of pepper|Cooking oil for frying"
+            data-steps="Grill or roast the eggplants until the skin is charred and soft.|Let them cool, then peel off the skin, keeping the stem on.|Flatten the eggplant gently with a fork.|Beat the eggs with salt and pepper in a shallow plate.|Dip the eggplant in the egg so it is well coated.|Fry in hot oil for 2–3 minutes per side until golden brown.|Serve hot with rice and banana ketchup or vinegar."
+            data-note="Prices are estimates and vary by store and location.">
+            <img src="images/tortang_talong.jpg" class="w-full h-50 object-cover rounded-2xl">
+            <div class="flex flex-col flex-1">
+                <h3 class="text-xl font-bold mt-2 mb-2">Tortang Talong</h3>
+                <p class="text-slate-800">Sample estimate: ₱25–₱40 / serving</p>
+                <button type="button" data-open-recipe class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
+                    View Recipe
+                </button>
+            </div>
+        </article>
+
+        <!-- Recipe 2 -->
+        <article class="surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+            data-recipe-card
+            data-name="Ginisang Sardinas"
+            data-category="ulam"
+            data-price="25–₱40"
+            data-ingredients="sardines onion garlic tomato"
+            data-ingredients-list="1 can sardines in tomato sauce|1 small onion, sliced|3 cloves garlic, minced|1 medium tomato, chopped|1 tbsp cooking oil|Salt and pepper to taste"
+            data-steps="Heat oil in a pan over medium heat.|Sauté the garlic until fragrant, then add the onion.|Add the tomato and cook until soft.|Pour in the sardines with the sauce and break them up gently.|Simmer for 3–5 minutes.|Season with salt and pepper, then serve with hot rice."
+            data-note="Prices are estimates and vary by store and location.">
+            <img src="images/ginisang_sardines.jpg" class="w-full h-50 object-cover rounded-2xl">
+            <div class="flex flex-col flex-1">
+                <h3 class="text-xl font-bold mt-2 mb-2">Ginisang Sardinas</h3>
+                <p class="text-slate-800">Sample estimate: ₱25–₱40 / serving</p>
+                <button type="button" data-open-recipe class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
+                    View Recipe
+                </button>
+            </div>
+        </article>
+
+        <!-- Recipe 3 -->
+        <article class="surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+            data-recipe-card
+            data-name="Ginisang Repolyo"
+            data-category="gulay"
+            data-price="20–₱35"
+            data-ingredients="cabbage garlic onion"
+            data-ingredients-list="1/4 head cabbage (repolyo), sliced|3 cloves garlic, minced|1 small onion, sliced|1 tbsp cooking oil|1 tbsp soy sauce or fish sauce|Pepper to taste"
+            data-steps="Heat oil in a pan over medium heat.|Sauté garlic and onion until soft.|Add the cabbage and stir for 2 minutes.|Add the soy sauce (or fish sauce) and a splash of water.|Cover and cook for 3–4 minutes until the cabbage is tender but still a little crisp.|Season with pepper and serve."
+            data-note="Prices are estimates and vary by store and location.">
+            <img src="images/ginisang_repolyo.jpg" class="w-full h-50 object-cover rounded-2xl">
+            <div class="flex flex-col flex-1">
+                <h3 class="text-xl font-bold mt-2 mb-2">Ginisang Repolyo</h3>
+                <p class="text-slate-800">Sample estimate: ₱20–₱35 / serving</p>
+                <button type="button" data-open-recipe class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
+                    View Recipe
+                </button>
+            </div>
+        </article>
+
+        <!-- Recipe 4-->
+        <article class="surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
+        data-name="Simple Chicken Afritada" data-category="meat" data-price="₱70–₱110"
+        data-ingredients="chicken tomato sauce potato carrot onion garlic"
+        data-ingredients-list="250–300 g chicken pieces|1 small potato, diced|1 small carrot, sliced|1/2 cup tomato sauce|1/2 onion, chopped|2 cloves garlic, minced|1 tablespoon cooking oil|1/2 cup water|Salt and pepper to taste"
+        data-steps="Heat oil in a pan and sauté the garlic and onion.|Add the chicken pieces and cook until lightly browned.|Pour in the tomato sauce and water.|Cover and simmer for 15 minutes.|Add the potatoes and carrots.|Continue cooking for 10–15 minutes or until the chicken is fully cooked and the vegetables are tender.|Season with salt and pepper, then serve with rice."
+        data-note="Prices are estimates and vary by store and location.">
+         <img src="images/afritada.jpg" class="w-full h-50 object-cover rounded-2xl">
+        <div class="flex flex-col flex-1">
+          <h3 class="text-xl font-bold mt-2 mb-2">Chicken Afritada</h3>
+          <p class="text-slate-800">Sample estimate: ₱70–₱110 / recipe</p>
+          <button type="button" data-open-recipe
+            class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
+            View Recipe
+          </button>
+        </div>
+      </article>
+
+    </div>
+</section>
+
+<!-- Recipe modal -->
+ <div id="recipeModal"
+     class="hidden fixed inset-0 z-50 items-center justify-center bg-black/60 p-4"
+     role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl bg-amber-50 p-6 shadow-xl [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <button type="button" id="closeRecipeModal" aria-label="Close recipe"
+                class="absolute top-3 right-4 text-3xl leading-none text-amber-900 cursor-pointer">&times;</button>
+
+        <h2 id="modalTitle" class="text-3xl font-bold text-amber-900 pr-8"></h2>
+        <p id="modalCost" class="mt-1 font-semibold text-amber-700"></p>
+
+        <h3 class="mt-5 mb-2 text-xl font-bold text-amber-950">Ingredients</h3>
+        <ul id="modalIngredients" class="list-disc pl-6 space-y-1 text-slate-800"></ul>
+
+        <h3 class="mt-5 mb-2 text-xl font-bold text-amber-950">Procedure</h3>
+        <ol id="modalSteps" class="list-decimal pl-6 space-y-2 text-slate-800"></ol>
+
+        <p id="modalNote" class="mt-5 text-sm italic text-slate-600"></p>
+    </div>
+</div>
+
+</body>
+</html>
