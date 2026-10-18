@@ -295,4 +295,58 @@ document.addEventListener("DOMContentLoaded", () => {
     if (state.extraSpent) spentAmountInput.value = state.extraSpent;
     renderAll();
   }
+
+// Contact form validation
+const contactForm = document.querySelector("#contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.querySelector("#contactName");
+        const email = document.querySelector("#contactEmail");
+        const message = document.querySelector("#contactMessage");
+
+        const nameError = document.querySelector("#nameError");
+        const emailError = document.querySelector("#emailError");
+        const messageError = document.querySelector("#messageError");
+        const formSuccess = document.querySelector("#formSuccess");
+
+        // Clear previous messages
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+        formSuccess.textContent = "";
+        formSuccess.classList.add("hidden");
+
+        let isValid = true;
+
+        if (name.value.trim() === "") {
+            nameError.textContent = "Please enter your name.";
+            isValid = false;
+        }
+
+        if (email.value.trim() === "") {
+            emailError.textContent = "Please enter your email.";
+            isValid = false;
+        } else if (!email.checkValidity()) {
+            emailError.textContent = "Please enter a valid email address.";
+            isValid = false;
+        }
+
+        if (message.value.trim() === "") {
+            messageError.textContent = "Please enter your message.";
+            isValid = false;
+        }
+
+        if (!isValid) return;
+
+        formSuccess.textContent =
+            "Thank you for contacting MealMate! Your form has been submitted.";
+
+        formSuccess.classList.remove("hidden");
+
+        contactForm.reset();
+    });
+}
 });
