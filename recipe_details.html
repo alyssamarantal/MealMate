@@ -15,36 +15,42 @@
 </head>
 
 <body>
-     <header class="site-header sticky top-0 z-30 bg-orange-100 shadow-sm">
- 
+    <header class="site-header sticky top-0 z-30 bg-orange-100 shadow-sm">
+
         <nav class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4"
             aria-label="Main navigation">
- 
+
             <a href="index.html" class="logo text-2xl text-amber-950 font-bold tracking-tight">
                 MealMate
             </a>
- 
+
             <button id="menuBtn" type="button" class="md:hidden text-2xl text-amber-950 p-2"
                 aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
- 
+
             <div id="navMenu" class="hidden w-full flex-col items-center gap-4 md:flex md:w-auto md:flex-row">
- 
+
                 <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="recipes.html">Recipes</a>
+                <a class="nav-link active" href="recipes.html">Recipes</a>
                 <a class="nav-link" href="budget_planner.html">Budget Planner</a>
                 <a class="nav-link" href="about.html">About</a>
- 
+
             </div>
         </nav>
- 
+
     </header>
 
 
 
     <main class="min-h-screen bg-white text-stone-900">
-
+        <!-- Back Button -->
+            <div class="max-w-5xl mx-auto px-5 md:px-8 pt-12">
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 text-amber-800 font-semibold hover:text-amber-950 hover:underline">
+                    ← Back to Recipes
+                </a>
+            </div>
         <!-- Recipe Header -->
         <section class="max-w-5xl mx-auto px-5 md:px-8 pt-12 pb-8">
 
@@ -52,12 +58,9 @@
                 MealMate • Budget-Friendly Recipes
             </p>
 
-            <h1 id="recipeTitle" class="font-serif text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
-                Tortang Talong
-            </h1>
+            <h1 id="recipeTitle" class="font-serif text-4xl md:text-6xl font-bold leading-tight max-w-4xl"></h1>
 
-            <p id="recipeNote" class="text-lg md:text-xl text-stone-600 mt-5 max-w-2xl">
-                A simple, affordable Filipino meal you can make at home.
+            <p id="recipeNote" class="text-sm md:text-xl text-stone-600 mt-5 max-w-2xl">
             </p>
 
             <!-- Author and Date -->
@@ -82,18 +85,13 @@
                     Instructions ↓
                 </button>
 
-                <button type="button" onclick="window.print()"
-                    class="rounded-full border border-stone-300 px-5 py-2.5 font-semibold hover:bg-stone-100 transition">
-                    Print Recipe
-                </button>
-
-            </div>
+                </div>
         </section>
 
         <!-- Large Recipe Image -->
         <section class="max-w-4xl mx-auto px-5 md:px-8">
             <div class="overflow-hidden rounded-2xl bg-stone-100">
-                <img id="recipeImage" src="images/tortang_talong.jpg" alt="Prepared Filipino recipe"
+                <img id="recipeImage" src=""
                     class="w-full h-72 md:h-[500px] object-cover">
             </div>
             <p class="text-sm text-stone-500 mt-3">
@@ -109,7 +107,6 @@
                 <div class="rounded-2xl bg-amber-50 p-5">
                     <p class="text-sm text-stone-600">Estimated Cost</p>
                     <p id="recipeCost" class="text-2xl font-bold text-amber-900 mt-2">
-                        ₱25–₱40
                     </p>
                 </div>
 
@@ -152,13 +149,6 @@
 
             </div>
 
-            <!-- Back Button -->
-            <div class="mt-12 pt-8 border-t border-stone-200">
-                <a href="index.html"
-                    class="inline-flex items-center gap-2 text-amber-800 font-semibold hover:text-amber-950 hover:underline">
-                    ← Back to Recipes
-                </a>
-            </div>
 
         </section>
     </main>
