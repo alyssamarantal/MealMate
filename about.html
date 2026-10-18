@@ -44,53 +44,75 @@
 
     </header>
 
-    <section class="bg-orange-50 px-8 py-8 md:py-8">
-        <p class="font-medium text-amber-800">Welcome to our Kitchen</p>
-        <h1 class="text-5xl font-bold text-amber-950 tracking-tight mt-2 mb-4">About MealMate</h1>
-        <p class="text-slate-800 text-4lg">We're here to make cooking simple,</p>
-        <p class="text-slate-800 text-4lg">affordable and enjoyable for everyone.</p>
+    <section class="grid md:grid-cols-2 gap-8 items-center bg-orange-50 px-8 py-4 md:py-10">
+        <div>
+            <p class="text-lg font-medium text-amber-800">Welcome to our Kitchen</p>
+            <h1 class="text-6xl font-bold text-amber-950 tracking-tight mt-2 mb-4">About MealMate</h1>
+            <p class="text-slate-800 text-4lg">We're here to make cooking simple,</p>
+            <p class="text-slate-800 text-4lg">affordable and enjoyable for everyone.</p>
+        </div>
+
+        <div class="rounded-2xl bg-orange-700/10 p-4 items-stretch">
+
+            <section class="max-w-4xl p-4">
+                <div class="relative overflow-hidden rounded-2xl shadow-lg">
+
+                    <!-- Images -->
+                    <div id="carouselImages" class="relative">
+                        <img src="images/kitchen.jpg" class="carousel-image w-full h-65 md:h-96 object-cover">
+
+                        <img src="images/pan.jpg" class="carousel-image hidden w-full h-65 md:h-96 object-cover">
+
+                        <img src="images/pakbet.jpg" class="carousel-image hidden w-full h-65 md:h-96 object-cover">
+
+                    </div>
+
+                    <!-- Previous button -->
+                    <button id="prevBtn" type="button" aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2
+             rounded-full bg-white/40 hover:bg-white
+             w-10 h-10 text-amber-950 text-2xl"> &#8249;</button>
+
+                    <!-- Next button -->
+                    <button id="nextBtn" type="button" aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2
+             rounded-full bg-white/40 hover:bg-white
+             w-10 h-10 text-amber-950 text-2xl">&#8250;</button>
+
+                </div>
+            </section>
+            <p class="note text-lg text-slate-800 text-center">“Good food doesn't have to be expensive.<br> It
+                just has to be delicious.”</p>
+        </div>
+        </div>
     </section>
 
     <section class="bg-orange-50 grid md:grid-cols-2 gap-5 items-start px-4 py-4 md:p-5">
         <div class="h-full rounded-2xl border border-orange-100  p-8 bg-white">
             <h2 class="text-xl font-bold text-amber-950">Our Mission</h2>
-            <p class="text-2lg text-slate-800 mt-2">MealMate was created to help people living in boarding houses,
-                dorms, and homes find easy and budget-friendly recipes.
-                We share simple cooking techniques and encourage thoughtful meal planning so delicious food can fit
-                different budgets.</p>
-            <div class="rounded-2xl bg-orange-700/10 p-4 mt-6 items-stretch">
+            <div>
+                <p class="text-lg text-slate-800 mt-2 mb-4">
+                    MealMate is a budget-friendly recipe website created to help people
+                    discover simple, affordable, and delicious meals they can prepare every
+                    day. We understand that cooking can sometimes be challenging, especially
+                    when you have a limited budget, a busy schedule, or only a few ingredients
+                    available in your kitchen.
+                </p>
 
-                <section class="max-w-4xl mx-auto p-4">
-                    <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                <p class="text-lg text-slate-800 mb-4">
+                    Whether you are a student living in a dormitory, a boarder staying in a
+                    boarding house, a busy worker, or someone who simply wants to save money
+                    on food, MealMate is here to make everyday cooking easier and more
+                    accessible.
+                </p>
 
-                        <!-- Images -->
-                        <div id="carouselImages" class="relative">
-                            <img src="images/pan.jpg" class="carousel-image w-full h-65 md:h-96 object-cover">
-
-                            <img src="images/kitchen.jpg"
-                                class="carousel-image hidden w-full h-65 md:h-96 object-cover">
-
-                            <img src="images/pakbet.jpg" class="carousel-image hidden w-full h-65 md:h-96 object-cover">
-
-                        </div>
-
-                        <!-- Previous button -->
-                        <button id="prevBtn" type="button" aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2
-             rounded-full bg-white/40 hover:bg-white
-             w-10 h-10 text-amber-950 text-2xl"> &#8249;</button>
-
-                        <!-- Next button -->
-                        <button id="nextBtn" type="button" aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2
-             rounded-full bg-white/40 hover:bg-white
-             w-10 h-10 text-amber-950 text-2xl">&#8250;</button>
-
-                    </div>
-                </section>
-                <p class="note text-2xl text-slate-800 text-center mt-2">“Good food doesn't have to be expensive.<br> It
-                    just has to be delicious.”</p>
+                <p class="text-lg text-slate-800">
+                    Our website features easy-to-follow recipes made with affordable and
+                    commonly available ingredients, such as eggs, noodles, canned goods,
+                    vegetables, and other everyday Filipino food staples. Each recipe includes
+                    ingredient lists, step-by-step cooking instructions, and estimated meal
+                    costs to help users plan their meals according to their budget.
+                </p>
             </div>
         </div>
-
 
         <div class="bg-white h-full rounded-2xl border border-orange-100 p-8">
             <h2 class="text-xl font-bold text-amber-950">Contact Us</h2>
@@ -115,11 +137,12 @@
                     <label for="contactEmail" class="mb-2 block font-medium">
                         Email
                     </label>
-                    <input type="email" id="contactEmail" name="email" placeholder="name@example.com" required
+                    <input type="email" id="contactEmail" name="email" placeholder="name@gmail.com" required
                         class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-orange-700">
                     <p id="emailError" class="text-sm text-red-600 mt-1"></p>
                 </div>
 
+                
                 <div>
                     <label for="contactMessage" class="mb-2 block font-medium">
                         Message
@@ -140,7 +163,6 @@
 
             </form>
         </div>
-
     </section>
 
     <footer class="bg-orange-100 text-gray-900 border-t border-gray-200">
