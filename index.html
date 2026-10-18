@@ -15,30 +15,33 @@
 </head>
 
 <body>
-     <header class="site-header sticky top-0 z-30 bg-orange-100 shadow-sm">
- 
+    <header class="site-header sticky top-0 z-30 bg-orange-100 shadow-sm">
+
         <nav class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4"
             aria-label="Main navigation">
- 
-            <a href="index.html" class="logo text-2xl text-amber-950 font-bold tracking-tight">
-                MealMate
+
+            <a href="index.html" class="logo flex items-center gap-2 text-2xl text-amber-950 font-bold tracking-tight">
+
+                <img src="images/mealmate-logo.png" alt="MealMate Logo" class="w-10 h-10 object-contain">
+
+                <span>MealMate</span>
             </a>
- 
+
             <button id="menuBtn" type="button" class="md:hidden text-2xl text-amber-950 p-2"
                 aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
- 
+
             <div id="navMenu" class="hidden w-full flex-col items-center gap-4 md:flex md:w-auto md:flex-row">
- 
+
                 <a class="nav-link active" href="index.html">Home</a>
                 <a class="nav-link" href="recipes.html">Recipes</a>
                 <a class="nav-link" href="budget_planner.html">Budget Planner</a>
                 <a class="nav-link" href="about.html">About</a>
- 
+
             </div>
         </nav>
- 
+
     </header>
 
     <section class="grid md:grid-cols-2 gap-10 items-center bg-orange-50 px-8 py-12 md:py-20">
@@ -72,12 +75,11 @@
                 <div class="flex flex-col flex-1">
                     <h3 class="text-xl font-bold mt-2 mb-2">Tortang Talong</h3>
                     <p class="text-slate-800">Sample estimate: ₱25–₱40 / serving</p>
-                   <button type="button" data-open-recipe
-    class="mt-4 w-full font-medium text-center rounded-full p-2
+                    <button type="button" data-open-recipe class="mt-4 w-full font-medium text-center rounded-full p-2
            border border-amber-900 cursor-pointer
            hover:bg-amber-700 hover:text-white">
-    View Recipe
-</button>
+                        View Recipe
+                    </button>
                 </div>
             </article>
 

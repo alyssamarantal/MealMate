@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Planner | MealMate</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
-     <header class="site-header sticky top-0 z-30 bg-orange-100 shadow-sm">
- 
+    <header class="site-header sticky top-0 z-30 bg-orange-100 shadow-sm">
+
         <nav class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4"
             aria-label="Main navigation">
- 
-            <a href="index.html" class="logo text-2xl text-amber-950 font-bold tracking-tight">
-                MealMate
+
+            <a href="index.html" class="logo flex items-center gap-2 text-2xl text-amber-950 font-bold tracking-tight">
+
+                <img src="images/mealmate-logo.png" alt="MealMate Logo" class="w-10 h-10 object-contain">
+
+                <span>MealMate</span>
             </a>
- 
+
             <button id="menuBtn" type="button" class="md:hidden text-2xl text-amber-950 p-2"
                 aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </button>
- 
+
             <div id="navMenu" class="hidden w-full flex-col items-center gap-4 md:flex md:w-auto md:flex-row">
- 
+
                 <a class="nav-link" href="index.html">Home</a>
                 <a class="nav-link" href="recipes.html">Recipes</a>
                 <a class="nav-link active" href="budget_planner.html">Budget Planner</a>
                 <a class="nav-link" href="about.html">About</a>
- 
+
             </div>
         </nav>
- 
+
     </header>
 
     <section class="bg-orange-50 px-8 py-8 md:py-8">
@@ -45,252 +52,237 @@
 
     <section class="bg-orange-50 grid md:grid-cols-2 gap-5 items-start px-4 py-4 md:p-5">
 
-    <!-- LEFT: Meal Cost Calculator -->
-    <div class="bg-white border border-orange-100 p-8 rounded-2xl">
-        <h2 class="text-xl font-bold">Meal Cost Calculator</h2>
-        <p class="text-sm text-slate-800">Estimate the cost of your meal</p>
+        <!-- LEFT: Meal Cost Calculator -->
+        <div class="bg-white border border-orange-100 p-8 rounded-2xl">
+            <h2 class="text-xl font-bold">Meal Cost Calculator</h2>
+            <p class="text-sm text-slate-800">Estimate the cost of your meal</p>
 
-        <label for="mealName" class="mt-4 mb-1 block font-medium">Recipe / Meal Name</label>
-        <input id="mealName" type="text" placeholder="e.g. Tortang talong"
-               class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-amber-700">
+            <label for="mealName" class="mt-4 mb-1 block font-medium">Recipe / Meal Name</label>
+            <input id="mealName" type="text" placeholder="e.g. Tortang talong"
+                class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-amber-700">
 
-        <label for="mealIngredients" class="mt-2 mb-1 block font-medium">Ingredients</label>
-        <input id="mealIngredients" type="text" placeholder="e.g. Egg, Egg plant"
-               class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-orange-700">
+            <label for="mealIngredients" class="mt-2 mb-1 block font-medium">Ingredients</label>
+            <input id="mealIngredients" type="text" placeholder="e.g. Egg, Egg plant"
+                class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-orange-700">
 
-        <label for="mealCost" class="mt-2 mb-1 block font-medium">Estimated Cost (₱)</label>
-        <input id="mealCost" type="number" min="0" step="0.01" placeholder="0"
-               class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-orange-700">
+            <label for="mealCost" class="mt-2 mb-1 block font-medium">Estimated Cost (₱)</label>
+            <input id="mealCost" type="number" min="0" step="0.01" placeholder="0"
+                class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-orange-700">
 
-        <p id="mealError" class="mt-2 text-sm text-red-600" hidden></p>
+            <p id="mealError" class="mt-2 text-sm text-red-600" hidden></p>
 
-        <button id="addMealBtn" type="button"
+            <button id="addMealBtn" type="button"
                 class="w-full bg-orange-700/60 text-white font-semibold py-2 mt-6 rounded-full hover:bg-orange-700/80 cursor-pointer">
-            Calculate &amp; Add Meal
-        </button>
+                Calculate &amp; Add Meal
+            </button>
 
-        <!-- Added meals -->
-        <div class="mt-6">
-            <div class="flex items-center justify-between">
-                <h3 class="font-bold text-amber-950">My Meals</h3>
-                <p class="text-sm text-slate-700">Meals total: <span id="mealsTotal" class="font-semibold">₱0.00</span></p>
+            <!-- Added meals -->
+            <div class="mt-6">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-bold text-amber-950">My Meals</h3>
+                    <p class="text-sm text-slate-700">Meals total: <span id="mealsTotal"
+                            class="font-semibold">₱0.00</span></p>
+                </div>
+                <p id="mealsEmpty" class="mt-2 text-sm text-slate-600">No meals added yet.</p>
+                <ul id="mealList" class="mt-2 space-y-2"></ul>
             </div>
-            <p id="mealsEmpty" class="mt-2 text-sm text-slate-600">No meals added yet.</p>
-            <ul id="mealList" class="mt-2 space-y-2"></ul>
         </div>
-    </div>
 
-    <!-- RIGHT: Budget Tracker -->
-    <div class="bg-white rounded-2xl border border-orange-100 p-8">
-        <h2 class="text-xl font-bold">My Budget Tracker</h2>
-        <p class="text-sm text-slate-800">Keep track of your daily or weekly food budget.</p>
+        <!-- RIGHT: Budget Tracker -->
+        <div class="bg-white rounded-2xl border border-orange-100 p-8">
+            <h2 class="text-xl font-bold">My Budget Tracker</h2>
+            <p class="text-sm text-slate-800">Keep track of your daily or weekly food budget.</p>
 
-        <label for="totalBudget" class="mt-4 mb-1 block font-medium">Total Budget (₱)</label>
-        <input id="totalBudget" type="number" min="0" step="0.01" placeholder="0"
-               class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-orange-700">
+            <label for="totalBudget" class="mt-4 mb-1 block font-medium">Total Budget (₱)</label>
+            <input id="totalBudget" type="number" min="0" step="0.01" placeholder="0"
+                class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-orange-700">
 
-        <label for="spentAmount" class="mt-2 mb-1 block font-medium">Spent Amount (₱)</label>
-        <input id="spentAmount" type="number" min="0" step="0.01" placeholder="0"
-               class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-orange-700">
+            <label for="spentAmount" class="mt-2 mb-1 block font-medium">Spent Amount (₱)</label>
+            <input id="spentAmount" type="number" min="0" step="0.01" placeholder="0"
+                class="w-full rounded-2xl border border-orange-100 p-3 outline-none focus:border-orange-700">
 
-        <p id="budgetError" class="mt-2 text-sm text-red-600" hidden></p>
+            <p id="budgetError" class="mt-2 text-sm text-red-600" hidden></p>
 
-        <button id="updateBudgetBtn" type="button"
+            <button id="updateBudgetBtn" type="button"
                 class="w-full bg-orange-700/60 text-white font-semibold py-2 mt-4 rounded-full hover:bg-orange-700/80 cursor-pointer">
-            Update Budget
-        </button>
+                Update Budget
+            </button>
 
-        <div class="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <div class="rounded-2xl bg-orange-700/10 p-4">
-                <p class="text-sm text-gray-600">Total budget</p>
-                <p id="totalOutput" class="mt-1 text-xl font-bold text-amber-950">₱0.00</p>
-            </div>
+            <div class="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                <div class="rounded-2xl bg-orange-700/10 p-4">
+                    <p class="text-sm text-gray-600">Total budget</p>
+                    <p id="totalOutput" class="mt-1 text-xl font-bold text-amber-950">₱0.00</p>
+                </div>
 
-            <div class="rounded-2xl bg-orange-700/10 p-4">
-                <p class="text-sm text-gray-600">Amount spent</p>
-                <p id="spentOutput" class="mt-1 text-xl font-bold text-amber-950">₱0.00</p>
-            </div>
+                <div class="rounded-2xl bg-orange-700/10 p-4">
+                    <p class="text-sm text-gray-600">Amount spent</p>
+                    <p id="spentOutput" class="mt-1 text-xl font-bold text-amber-950">₱0.00</p>
+                </div>
 
-            <div class="rounded-2xl bg-orange-700/10 p-4">
-                <p class="text-sm text-gray-600">Remaining</p>
-                <p id="remainingOutput" class="mt-1 text-xl font-bold text-amber-950">₱0.00</p>
-            </div>
-        </div>
-
-        <!-- Progress Bar -->
-        <div class="mt-6 h-3 overflow-hidden rounded-full bg-orange-100">
-            <div id="budgetProgress"
-                 class="h-full rounded-full bg-orange-700/10 transition-all duration-500"
-                 style="width: 0%">
-            </div>
-        </div>
-
-        <!-- Status Message -->
-        <p id="budgetMessage" class="mt-4 text-gray-600">
-            Set your budget to get started.
-        </p>
-    </div>
-    </section>
-
-    <section class="bg-orange-50 px-4 py-4 md:py-8">
-    <div class="rounded-2xl bg-orange-700/10 p-8">
-        <h2 class="tips text-2xl font-bold tracking-tight mb-2">♡ Budget Tips</h2>
-        <ul class="list-disc pl-5 space-y-1 text-slate-700">
-        <li>Buy in bulk when possible</li>
-        <li>Choose affordable and nutritious ingredients</li>
-        <li>Plan your meals ahead</li>
-       </ul>
-    </div>
-    </section>
-
-    <footer class="bg-orange-100 text-gray-900 border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 md:px-10 py-10">
-
-        <!-- Footer Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
-            <!-- Column 1: Logo and Description -->
-            <div class="space-y-4">
-                <a href="index.html"
-                   class="logo text-3xl text-amber-950 font-bold">
-                    MealMate</a>
-
-                <p class="text-sm text-gray-600">
-                    Great food, small budget.
-                    Discover affordable and delicious meals
-                    for every day.
-                </p>
-
-                <!-- Social Media -->
-                <div class="pt-3">
-                    <p class="font-medium mb-3">Follow Us</p>
-
-                    <div class="flex gap-5 text-gray-600">
-                        <a href="#" aria-label="Instagram"
-                           class="hover:text-orange-700 transition">
-                            <i class="fa-brands fa-instagram text-2xl"></i>
-                        </a>
-
-                        <a href="#" aria-label="Facebook"
-                           class="hover:text-orange-700 transition">
-                            <i class="fa-brands fa-facebook-f text-2xl"></i>
-                        </a>
-
-                        <a href="#" aria-label="YouTube"
-                           class="hover:text-orange-700 transition">
-                            <i class="fa-brands fa-youtube text-2xl"></i>
-                        </a>
-
-                        <a href="#" aria-label="Pinterest"
-                           class="hover:text-orange-700 transition">
-                            <i class="fa-brands fa-pinterest-p text-2xl"></i>
-                        </a>
-                    </div>
+                <div class="rounded-2xl bg-orange-700/10 p-4">
+                    <p class="text-sm text-gray-600">Remaining</p>
+                    <p id="remainingOutput" class="mt-1 text-xl font-bold text-amber-950">₱0.00</p>
                 </div>
             </div>
 
-            <!-- Column 2: Explore -->
-            <div>
-                <h3 class="font-bold text-lg mb-5">EXPLORE</h3>
-
-                <ul class="space-y-4 text-gray-700">
-                    <li>
-                        <a href="recipes.html"
-                           class="hover:text-orange-700 transition">
-                            All Recipes
-                        </a>
-                    </li>
-                    <li>
-                        <a href="recipes.html"
-                           class="hover:text-orange-700 transition">
-                            Quick & Easy
-                        </a>
-                    </li>
-                    <li>
-                        <a href="recipes.html"
-                           class="hover:text-orange-700 transition">
-                            Budget Meals
-                        </a>
-                    </li>
-                    <li>
-                        <a href="budget_planner.html"
-                           class="hover:text-orange-700 transition">
-                            Meal Budget Planner
-                        </a>
-                    </li>
-                </ul>
+            <!-- Progress Bar -->
+            <div class="mt-6 h-3 overflow-hidden rounded-full bg-orange-100">
+                <div id="budgetProgress" class="h-full rounded-full bg-orange-700/10 transition-all duration-500"
+                    style="width: 0%">
+                </div>
             </div>
 
-            <!-- Column 3: MealMate -->
-            <div>
-                <h3 class="font-bold text-lg mb-5">MEALMATE</h3>
-
-                <ul class="space-y-4 text-gray-700">
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            Our Mission
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            Contact Us
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Helpful Links -->
-            <div>
-                <h3 class="font-bold text-lg mb-5">HELPFUL LINKS</h3>
-
-                <ul class="space-y-4 text-gray-700">
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            How It Works
-                        </a>
-                    </li>
-                    <li>
-                        <a href="budget_planner.html"
-                           class="hover:text-orange-700 transition">
-                            Save on Meals
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            FAQs
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            Privacy Policy
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
+            <!-- Status Message -->
+            <p id="budgetMessage" class="mt-4 text-gray-600">
+                Set your budget to get started.
+            </p>
         </div>
+    </section>
 
-        <!-- Bottom Footer -->
-        <div class="border-t border-amber-800 mt-10 pt-5
+    <section class="bg-orange-50 px-4 py-4 md:py-8">
+        <div class="rounded-2xl bg-orange-700/10 p-8">
+            <h2 class="tips text-2xl font-bold tracking-tight mb-2">♡ Budget Tips</h2>
+            <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                <li>Buy in bulk when possible</li>
+                <li>Choose affordable and nutritious ingredients</li>
+                <li>Plan your meals ahead</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="bg-orange-100 text-gray-900 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 py-10">
+
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Column 1: Logo and Description -->
+                <div class="space-y-4">
+                    <a href="index.html" class="logo text-3xl text-amber-950 font-bold">
+                        MealMate</a>
+
+                    <p class="text-sm text-gray-600">
+                        Great food, small budget.
+                        Discover affordable and delicious meals
+                        for every day.
+                    </p>
+
+                    <!-- Social Media -->
+                    <div class="pt-3">
+                        <p class="font-medium mb-3">Follow Us</p>
+
+                        <div class="flex gap-5 text-gray-600">
+                            <a href="#" aria-label="Instagram" class="hover:text-orange-700 transition">
+                                <i class="fa-brands fa-instagram text-2xl"></i>
+                            </a>
+
+                            <a href="#" aria-label="Facebook" class="hover:text-orange-700 transition">
+                                <i class="fa-brands fa-facebook-f text-2xl"></i>
+                            </a>
+
+                            <a href="#" aria-label="YouTube" class="hover:text-orange-700 transition">
+                                <i class="fa-brands fa-youtube text-2xl"></i>
+                            </a>
+
+                            <a href="#" aria-label="Pinterest" class="hover:text-orange-700 transition">
+                                <i class="fa-brands fa-pinterest-p text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Explore -->
+                <div>
+                    <h3 class="font-bold text-lg mb-5">EXPLORE</h3>
+
+                    <ul class="space-y-4 text-gray-700">
+                        <li>
+                            <a href="recipes.html" class="hover:text-orange-700 transition">
+                                All Recipes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="recipes.html" class="hover:text-orange-700 transition">
+                                Quick & Easy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="recipes.html" class="hover:text-orange-700 transition">
+                                Budget Meals
+                            </a>
+                        </li>
+                        <li>
+                            <a href="budget_planner.html" class="hover:text-orange-700 transition">
+                                Meal Budget Planner
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: MealMate -->
+                <div>
+                    <h3 class="font-bold text-lg mb-5">MEALMATE</h3>
+
+                    <ul class="space-y-4 text-gray-700">
+                        <li>
+                            <a href="about.html" class="hover:text-orange-700 transition">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="hover:text-orange-700 transition">
+                                Our Mission
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="hover:text-orange-700 transition">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Helpful Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-5">HELPFUL LINKS</h3>
+
+                    <ul class="space-y-4 text-gray-700">
+                        <li>
+                            <a href="about.html" class="hover:text-orange-700 transition">
+                                How It Works
+                            </a>
+                        </li>
+                        <li>
+                            <a href="budget_planner.html" class="hover:text-orange-700 transition">
+                                Save on Meals
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="hover:text-orange-700 transition">
+                                FAQs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="hover:text-orange-700 transition">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-amber-800 mt-10 pt-5
                     flex flex-col sm:flex-row justify-between
                     items-center gap-3 text-sm text-amber-800">
-            <p>&copy; 2026 MealMate. All rights reserved.</p>
-            <p>Made with care for budget-friendly meals.</p>
-        </div>
+                <p>&copy; 2026 MealMate. All rights reserved.</p>
+                <p>Made with care for budget-friendly meals.</p>
+            </div>
 
-    </div>
-</footer>
+        </div>
+    </footer>
 
 </body>
+
 </html>
