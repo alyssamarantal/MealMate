@@ -42,10 +42,8 @@
     </header>
 
 
-
     <main class="min-h-screen bg-white text-stone-900 mb-10">
 
-        <!-- Recipe Header -->
         <section class="max-w-5xl mx-auto px-5 md:px-8 pt-12 pb-8">
 
             <p class="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700 mb-4">
@@ -57,14 +55,14 @@
             <p id="recipeNote" class="text-sm md:text-xl text-stone-600 mt-5 max-w-2xl">
             </p>
 
-            <!-- Author and Date -->
+         
             <div class="flex flex-wrap gap-x-3 gap-y-2 text-sm text-stone-600 mt-6">
                 <span>By <strong class="text-stone-900">MealMate Team</strong></span>
                 <span class="text-stone-300">|</span>
                 <span>Budget-friendly cooking made easy</span>
             </div>
 
-            <!-- Recipe Action Buttons -->
+          
             <div class="flex flex-wrap items-center gap-3 mt-7 border-y border-stone-200 py-4">
 
                 <button type="button"
@@ -82,7 +80,7 @@
             </div>
         </section>
 
-        <!-- Large Recipe Image -->
+        
         <section class="max-w-4xl mx-auto px-5 md:px-8">
             <div class="overflow-hidden rounded-2xl bg-stone-100">
                 <img id="recipeImage" src="" class="w-full h-72 md:h-[500px] object-cover">
@@ -99,18 +97,18 @@
 
                 <div class="rounded-2xl bg-amber-50 p-5">
                     <p class="text-sm text-stone-600">Estimated Cost</p>
-                    <p id="recipeCost" class="text-2xl font-bold text-amber-900 mt-2">
+                    <p id="recipeCost" class="text-lg font-bold text-amber-900 mt-2">
                     </p>
                 </div>
 
                 <div class="rounded-2xl bg-stone-50 p-5">
                     <p class="text-sm text-stone-600">Recipe Type</p>
-                    <p class="text-xl font-bold mt-2">Budget Meal</p>
+                    <p class="text-lg font-bold mt-2">Budget Meal</p>
                 </div>
 
                 <div class="rounded-2xl bg-stone-50 p-5">
                     <p class="text-sm text-stone-600">Best For</p>
-                    <p class="text-xl font-bold mt-2">Everyday Cooking</p>
+                    <p class="text-lg font-bold mt-2">Everyday Cooking</p>
                 </div>
 
             </div>
@@ -141,7 +139,7 @@
                 </section>
 
             </div>
-            <!-- Back Button -->
+           
             <div class="border-t border-amber-800 mt-8 pt-8">
                 <a href="index.html"
                     class="inline-flex items-center gap-2 text-amber-800 font-semibold hover:text-amber-950 hover:underline">
@@ -307,7 +305,7 @@
 
             document.getElementById("recipeTitle").textContent = recipe.name;
             document.getElementById("recipeCost").textContent =
-                `Estimated ulam cost: ₱${recipe.price} per serving`;
+                `₱${recipe.price} per serving`;
 
             document.getElementById("recipeNote").textContent = recipe.note;
 

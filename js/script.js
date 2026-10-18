@@ -73,11 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         note: card.dataset.note || "",
         image: card.querySelector("img")?.getAttribute("src") || ""
       };
-
-      // Save the selected recipe for the next page
       sessionStorage.setItem("selectedRecipe", JSON.stringify(recipe));
-
-      // Open the separate recipe details page
       window.location.href = "recipe_details.html";
     });
   });
