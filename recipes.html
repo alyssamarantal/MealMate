@@ -7,42 +7,39 @@
   <title>Recipes | MealMate</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&family=Patrick+Hand&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="js/script.js" defer></script>
 </head>
 
 <body>
-  <header class="site-header bg-orange-100  top-0 -30">
-<nav class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4"
-     aria-label="Main navigation">
-
-  <a href="index.html"
-     class="logo text-2xl text-amber-950 font-bold tracking-tight">
-    MealMate
-  </a>
-
-  <button id="menuBtn"
-          type="button"
-          class="md:hidden text-2xl text-amber-950 p-2"
-          aria-label="Toggle navigation"
-          aria-controls="navMenu"
-          aria-expanded="false">
-    <i class="fa-solid fa-bars"></i>
-  </button>
-
-  <div id="navMenu"
-       class="hidden w-full flex-col items-center gap-4 md:flex md:w-auto md:flex-row">
-
-    <a class="nav-link" href="index.html">Home</a>
-    <a class="nav-link active" href="recipes.html">Recipes</a>
-    <a class="nav-link" href="budget_planner.html">Budget Planner</a>
-    <a class="nav-link" href="about.html">About</a>
-
-  </div>
-</nav>
-
-  </header>
+   <header class="site-header sticky top-0 z-30 bg-orange-100 shadow-sm">
+ 
+        <nav class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4"
+            aria-label="Main navigation">
+ 
+            <a href="index.html" class="logo text-2xl text-amber-950 font-bold tracking-tight">
+                MealMate
+            </a>
+ 
+            <button id="menuBtn" type="button" class="md:hidden text-2xl text-amber-950 p-2"
+                aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+ 
+            <div id="navMenu" class="hidden w-full flex-col items-center gap-4 md:flex md:w-auto md:flex-row">
+ 
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="recipes.html">Recipes</a>
+                <a class="nav-link" href="budget_planner.html">Budget Planner</a>
+                <a class="nav-link" href="about.html">About</a>
+ 
+            </div>
+        </nav>
+ 
+    </header>
 
   <section class="px-8 py-8 md:py-8 bg-orange-100/30">
     <h1 class="text-5xl font-bold text-amber-950 tracking-tight mb-4">Simple Recipes<br>for Everyday Meals</h1>
@@ -64,7 +61,8 @@
 
       <!-- Types -->
       <div class="md:col-span-3">
-        <select id="mealtype" class="w-full surface border rounded-lg text-slate-700 py-2 px-4 outline-none focus:border-amber-700">
+        <select id="mealtype"
+          class="w-full surface border rounded-lg text-slate-700 py-2 px-4 outline-none focus:border-amber-700">
           <option value="all">All types</option>
           <option value="egg">Egg</option>
           <option value="canned">Canned Goods</option>
@@ -79,10 +77,11 @@
   <section class="py-8 px-8 bg-orange-50">
     <h2 class="mb-2 text-base font-medium text-slate-700">All Recipes</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-      
+
       <!-- Recipe 1 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Tortang Talong" data-category="egg" data-price="25–₱40" data-ingredients="eggplant egg salt oil"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Tortang Talong" data-category="egg" data-price="25–₱40"
+        data-ingredients="eggplant egg salt oil"
         data-ingredients-list="3 pcs eggplant (talong)|2 pcs eggs|1/2 tsp salt|Pinch of pepper|Cooking oil for frying"
         data-steps="Grill or roast the eggplants until the skin is charred and soft.|Let them cool, then peel off the skin, keeping the stem on.|Flatten the eggplant gently with a fork.|Beat the eggs with salt and pepper in a shallow plate.|Dip the eggplant in the egg so it is well coated.|Fry in hot oil for 2–3 minutes per side until golden brown.|Serve hot with rice and banana ketchup or vinegar."
         data-note="Prices are estimates and vary by store and location.">
@@ -98,8 +97,8 @@
       </article>
 
       <!-- Recipe 2 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Ginisang Sardinas" data-category="canned" data-price="25–₱40"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Ginisang Sardinas" data-category="canned" data-price="25–₱40"
         data-ingredients="sardines onion garlic tomato"
         data-ingredients-list="1 can sardines in tomato sauce|1 small onion, sliced|3 cloves garlic, minced|1 medium tomato, chopped|1 tbsp cooking oil|Salt and pepper to taste"
         data-steps="Heat oil in a pan over medium heat.|Sauté the garlic until fragrant, then add the onion.|Add the tomato and cook until soft.|Pour in the sardines with the sauce and break them up gently.|Simmer for 3–5 minutes.|Season with salt and pepper, then serve with hot rice."
@@ -116,13 +115,14 @@
       </article>
 
       <!-- Recipe 3 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Ginisang Repolyo" data-category="veg" data-price="20–₱35" data-ingredients="cabbage garlic onion"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Ginisang Repolyo" data-category="veg" data-price="20–₱35"
+        data-ingredients="cabbage garlic onion"
         data-ingredients-list="1/4 head cabbage (repolyo), sliced|3 cloves garlic, minced|1 small onion, sliced|1 tbsp cooking oil|1 tbsp soy sauce or fish sauce|Pepper to taste"
         data-steps="Heat oil in a pan over medium heat.|Sauté garlic and onion until soft.|Add the cabbage and stir for 2 minutes.|Add the soy sauce (or fish sauce) and a splash of water.|Cover and cook for 3–4 minutes until the cabbage is tender but still a little crisp.|Season with pepper and serve."
         data-note="Prices are estimates and vary by store and location.">
         <img src="images/ginisang_repolyo.jpg" class="w-full h-50 object-cover rounded-2xl">
-      <div class="flex flex-col flex-1">
+        <div class="flex flex-col flex-1">
           <h3 class="text-xl font-bold mt-2 mb-2">Ginisang Repolyo</h3>
           <p class="text-slate-800">Sample estimate: ₱20–₱35 / serving</p>
           <button type="button" data-open-recipe
@@ -133,15 +133,13 @@
       </article>
 
       <!-- Recipe 4 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Ginisang Kangkong" 
-        data-category="veg" 
-        data-price="₱20–₱35"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Ginisang Kangkong" data-category="veg" data-price="₱20–₱35"
         data-ingredients="kangkong garlic onion soy sauce oil"
         data-ingredients-list="1 bunch kangkong, washed and chopped|3 cloves garlic, minced|1 tablespoon soy sauce|1 tablespoon cooking oil|2 tablespoons water|Black pepper to taste"
         data-steps="Wash the kangkong thoroughly and cut into pieces.|Heat oil in a pan.|Sauté the garlic until fragrant.|Add the kangkong stems and stir-fry for 1–2 minutes.|Add the leaves, soy sauce, and water.|Stir and cook for another 2–3 minutes until wilted and tender.|Season with black pepper and serve with rice."
         data-note="Prices are estimates and vary by store and location.">
-         <img src="images/kangkong.jpg" class="w-full h-50 object-cover rounded-2xl">
+        <img src="images/kangkong.jpg" class="w-full h-50 object-cover rounded-2xl">
         <div class="flex flex-col flex-1">
           <h3 class="text-xl font-bold mt-2 mb-2">Ginisang Kangkong</h3>
           <p class="text-slate-800">Sample estimate: ₱20–₱35 / recipe</p>
@@ -153,8 +151,8 @@
       </article>
 
       <!-- Recipe 5 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Ginisang Corned Beef" data-category="canned" data-price="₱35–₱60"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Ginisang Corned Beef" data-category="canned" data-price="₱35–₱60"
         data-ingredients="corned beef onion potato oil"
         data-ingredients-list="1 small can corned beef|1/2 onion, sliced|1 tablespoon cooking oil|2 tablespoons water, if needed|Optional: 1 small potato, diced"
         data-steps="Heat oil in a pan over medium heat.|Sauté the onion until soft.|If using potato, add it with a little water and cook until tender.|Add the corned beef and stir well.|Cook for 3–5 minutes, stirring occasionally.|Serve hot with rice."
@@ -171,8 +169,8 @@
       </article>
 
       <!-- Recipe 6-->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Ginisang Tuna with Vegetables" data-category="canned" data-price="₱35–₱60"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Ginisang Tuna with Vegetables" data-category="canned" data-price="₱35–₱60"
         data-ingredients="tuna cabbage garlic onion oil"
         data-ingredients-list="1 small can tuna|1 cup shredded cabbage|1/4 onion, sliced|2 cloves garlic, minced|1 tablespoon cooking oil|Salt and pepper to taste"
         data-steps="Heat oil in a pan over medium heat.|Sauté the garlic and onion until fragrant.|Add the canned tuna and stir.|Add the shredded cabbage and mix well.|Cook for 3–5 minutes until the cabbage softens.|Season to taste and serve with rice."
@@ -189,13 +187,13 @@
       </article>
 
       <!-- Recipe 7 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Chicken Adobo" data-category="meat" data-price="₱60–₱100"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Chicken Adobo" data-category="meat" data-price="₱60–₱100"
         data-ingredients="chicken soy sauce vinegar garlic pepper bay leaves"
         data-ingredients-list="250–300 g chicken pieces|2 tablespoons soy sauce|2 tablespoons vinegar|3 cloves garlic, crushed|1/2 cup water|1 bay leaf|Black pepper to taste|1 teaspoon cooking oil"
         data-steps="Heat oil in a pan and sauté the garlic until fragrant.|Add the chicken pieces and cook until lightly browned.|Pour in the soy sauce, vinegar, and water.|Add the bay leaf and black pepper.|Bring to a boil without stirring for a few minutes, then stir gently.|Cover and simmer for 20–25 minutes or until the chicken is fully cooked and tender.|Serve hot with rice."
         data-note="Prices are estimates and vary by store and location.">
-         <img src="images/adobo.jpg" class="w-full h-50 object-cover rounded-2xl">
+        <img src="images/adobo.jpg" class="w-full h-50 object-cover rounded-2xl">
         <div class="flex flex-col flex-1">
           <h3 class="text-xl font-bold mt-2 mb-2">Chicken Adobo</h3>
           <p class="text-slate-800">Sample estimate: ₱60–₱100 / recipe</p>
@@ -207,13 +205,13 @@
       </article>
 
       <!-- Recipe 8 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Simple Chicken Afritada" data-category="meat" data-price="₱70–₱110"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Simple Chicken Afritada" data-category="meat" data-price="₱70–₱110"
         data-ingredients="chicken tomato sauce potato carrot onion garlic"
         data-ingredients-list="250–300 g chicken pieces|1 small potato, diced|1 small carrot, sliced|1/2 cup tomato sauce|1/2 onion, chopped|2 cloves garlic, minced|1 tablespoon cooking oil|1/2 cup water|Salt and pepper to taste"
         data-steps="Heat oil in a pan and sauté the garlic and onion.|Add the chicken pieces and cook until lightly browned.|Pour in the tomato sauce and water.|Cover and simmer for 15 minutes.|Add the potatoes and carrots.|Continue cooking for 10–15 minutes or until the chicken is fully cooked and the vegetables are tender.|Season with salt and pepper, then serve with rice."
         data-note="Prices are estimates and vary by store and location.">
-         <img src="images/afritada.jpg" class="w-full h-50 object-cover rounded-2xl">
+        <img src="images/afritada.jpg" class="w-full h-50 object-cover rounded-2xl">
         <div class="flex flex-col flex-1">
           <h3 class="text-xl font-bold mt-2 mb-2">Chicken Afritada</h3>
           <p class="text-slate-800">Sample estimate: ₱70–₱110 / recipe</p>
@@ -225,14 +223,14 @@
       </article>
 
       <!-- Recipe 9 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Pork Giniling with Potatoes" data-category="meat" data-price="₱60–₱100"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Pork Giniling with Potatoes" data-category="meat" data-price="₱60–₱100"
         data-ingredients="ground pork potato carrot tomato sauce garlic onion"
         data-ingredients-list="200 g ground pork|1 small potato, diced|1/2 carrot, diced|1/4 cup tomato sauce|1/2 onion, chopped|2 cloves garlic, minced|1 tablespoon cooking oil|1/2 cup water|Salt and pepper to taste"
         data-steps="Heat oil in a pan.|Sauté the garlic and onion until fragrant.|Add the ground pork and cook until no longer pink.|Add the tomato sauce and water, then stir.|Add the diced potato and carrot.|Cover and simmer for 10–15 minutes or until the pork is fully cooked and the vegetables are tender.|Season with salt and pepper and serve with rice."
         data-note="Prices are estimates and vary by store and location.">
-         <img src="images/pork_giniling.jpg" class="w-full h-50 object-cover rounded-2xl">
-         <div class="flex flex-col flex-1">
+        <img src="images/pork_giniling.jpg" class="w-full h-50 object-cover rounded-2xl">
+        <div class="flex flex-col flex-1">
           <h3 class="text-xl font-bold mt-2 mb-2">Pork Giniling</h3>
           <p class="text-slate-800">Sample estimate: ₱60–₱100 / recipe</p>
           <button type="button" data-open-recipe
@@ -243,8 +241,8 @@
       </article>
 
       <!-- Recipe 10 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Simple Pork Steak" data-category="meat" data-price="₱70–₱120"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Simple Pork Steak" data-category="meat" data-price="₱70–₱120"
         data-ingredients="pork soy sauce calamansi onion garlic"
         data-ingredients-list="250 g pork, thinly sliced|2 tablespoons soy sauce|2 tablespoons calamansi juice|1 small onion, sliced into rings|2 cloves garlic, minced|1/2 cup water|1 tablespoon cooking oil|Black pepper to taste"
         data-steps="Combine the pork, soy sauce, calamansi juice, and black pepper in a bowl.|Let the pork marinate for 10 minutes.|Heat oil in a pan and sauté the garlic.|Add the pork and cook until lightly browned.|Pour in the marinade and water.|Cover and simmer until the pork is fully cooked and tender, adding water if needed.|Add the onion rings and cook for another 2–3 minutes.|Serve with rice."
@@ -262,15 +260,15 @@
 
 
       <!-- Recipe 11 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Ginisang Sayote" data-category="veg" data-price="₱20–₱35"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Ginisang Sayote" data-category="veg" data-price="₱20–₱35"
         data-ingredients="sayote garlic onion oil"
         data-ingredients-list="1 medium sayote, peeled and sliced|2 cloves garlic, minced|1/4 onion, sliced|1 tablespoon cooking oil|1/2 cup water|Salt and pepper to taste"
         data-steps="Peel and slice the sayote into thin strips.|Heat oil in a pan over medium heat.|Sauté the garlic and onion until fragrant.|Add the sliced sayote and stir.|Pour in the water and cover the pan.|Cook for 5–8 minutes until tender.|Season with salt and pepper, then serve with rice."
         data-note="Prices are estimates and vary by store and location.">
-         <img src="images/sayote.jpg" class="w-full h-50 object-cover rounded-2xl">
-         <div class="flex flex-col flex-1">
-         <h3 class="text-xl font-bold mt-2 mb-2">Ginisang Sayote</h3>
+        <img src="images/sayote.jpg" class="w-full h-50 object-cover rounded-2xl">
+        <div class="flex flex-col flex-1">
+          <h3 class="text-xl font-bold mt-2 mb-2">Ginisang Sayote</h3>
           <p class="text-slate-800">Sample estimate: ₱20–₱35 / recipe</p>
           <button type="button" data-open-recipe
             class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
@@ -281,8 +279,8 @@
 
 
       <!-- Recipe 12 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Ginisang Ampalaya with Egg" data-category="veg" data-price="₱25–₱45"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Ginisang Ampalaya with Egg" data-category="veg" data-price="₱25–₱45"
         data-ingredients="ampalaya egg garlic onion oil"
         data-ingredients-list="1 medium ampalaya, thinly sliced|2 eggs|2 cloves garlic, minced|1/4 onion, sliced|1 tablespoon cooking oil|Salt and pepper to taste"
         data-steps="Slice the ampalaya thinly and remove the seeds.|Optional: soak it in salted water for 10 minutes, then drain.|Heat oil in a pan.|Sauté the garlic and onion until fragrant.|Add the ampalaya and cook for 3–5 minutes.|Beat the eggs and pour them into the pan.|Stir gently until the eggs are fully cooked.|Season to taste and serve with rice."
@@ -300,8 +298,8 @@
 
 
       <!-- Recipe 13 -->
-      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-        data-name="Ginisang Pechay" data-category="veg" data-price="₱20–₱35"
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Ginisang Pechay" data-category="veg" data-price="₱20–₱35"
         data-ingredients="pechay garlic onion oil"
         data-ingredients-list="1 bunch pechay, washed and chopped|2 cloves garlic, minced|1/4 onion, sliced|1 tablespoon cooking oil|1/4 cup water|Salt and pepper to taste"
         data-steps="Wash the pechay thoroughly and chop it into pieces.|Heat oil in a pan.|Sauté the garlic and onion until fragrant.|Add the pechay stems and cook for 2 minutes.|Add the leaves and water.|Stir and cook for another 2–3 minutes until tender.|Season to taste and serve with rice."
@@ -317,74 +315,79 @@
         </div>
       </article>
 
-<!--Recipe 14-->
-<article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-  data-name="Tinolang Itlog" data-category="egg" data-price="25–₱45" data-ingredients="egg sayote ginger garlic onion leafy greens"
-  data-ingredients-list="2 pcs eggs|1/2 pc sayote, sliced|2 cloves garlic, minced|1/4 pc onion, sliced|1 thumb-sized piece ginger, sliced|2 cups water|A handful of leafy greens (optional)|Salt and pepper to taste|1 tsp cooking oil"
-  data-steps="Heat oil in a pot and saute the ginger, garlic, and onion.|Add the water and bring it to a boil.|Add the sayote and simmer for 5–8 minutes until tender.|Crack the eggs into the gently simmering broth, keeping them whole, or beat them and pour slowly for egg ribbons.|Simmer until the eggs are fully cooked.|Add leafy greens near the end, if using.|Season with salt and pepper, then serve hot."
-  data-note="Prices are estimates and vary by store and location.">
-  <img src="images/tinolang_itlog.jpg" class="w-full h-50 object-cover rounded-2xl" alt="Tinolang Itlog">
-  <div class="flex flex-col flex-1">
-    <h3 class="text-xl font-bold mt-2 mb-2">Tinolang Itlog</h3>
-    <p class="text-slate-800">Sample estimate: ₱25–₱45 / serving</p>
-    <button type="button" data-open-recipe
-      class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
-      View Recipe
-    </button>
-  </div>
-</article>
+      <!--Recipe 14-->
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Tinolang Itlog" data-category="egg" data-price="25–₱45"
+        data-ingredients="egg sayote ginger garlic onion leafy greens"
+        data-ingredients-list="2 pcs eggs|1/2 pc sayote, sliced|2 cloves garlic, minced|1/4 pc onion, sliced|1 thumb-sized piece ginger, sliced|2 cups water|A handful of leafy greens (optional)|Salt and pepper to taste|1 tsp cooking oil"
+        data-steps="Heat oil in a pot and saute the ginger, garlic, and onion.|Add the water and bring it to a boil.|Add the sayote and simmer for 5–8 minutes until tender.|Crack the eggs into the gently simmering broth, keeping them whole, or beat them and pour slowly for egg ribbons.|Simmer until the eggs are fully cooked.|Add leafy greens near the end, if using.|Season with salt and pepper, then serve hot."
+        data-note="Prices are estimates and vary by store and location.">
+        <img src="images/tinolang_itlog.jpg" class="w-full h-50 object-cover rounded-2xl" alt="Tinolang Itlog">
+        <div class="flex flex-col flex-1">
+          <h3 class="text-xl font-bold mt-2 mb-2">Tinolang Itlog</h3>
+          <p class="text-slate-800">Sample estimate: ₱25–₱45 / serving</p>
+          <button type="button" data-open-recipe
+            class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
+            View Recipe
+          </button>
+        </div>
+      </article>
 
-<!--Recipe 15-->
-<article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-  data-name="Ginisang Sayote with Century Tuna" data-category="veg" data-price="40–₱65" data-ingredients="sayote tuna garlic onion tomato oil"
-  data-ingredients-list="1 medium sayote, peeled and sliced|1/2 can Century Tuna|2 cloves garlic, minced|1/4 pc onion, sliced|1 small tomato, chopped|1/2 cup water|Salt and pepper to taste|1 tbsp cooking oil"
-  data-steps="Heat oil in a pan and saute the garlic, onion, and tomato until softened.|Add the sliced sayote and stir-fry for 2–3 minutes.|Pour in the water and cover the pan.|Simmer for 5–8 minutes or until the sayote is tender.|Add the tuna and mix gently.|Season with salt and pepper, then cook for another 2 minutes.|Serve hot with rice."
-  data-note="Prices are estimates and vary by store and location.">
-  <img src="images/sayote_tuna.jpg" class="w-full h-50 object-cover rounded-2xl" alt="Ginisang Sayote with Century Tuna">
-  <div class="flex flex-col flex-1">
-    <h3 class="text-xl font-bold mt-2 mb-2">Ginisang Sayote with Tuna</h3>
-    <p class="text-slate-800">Sample estimate: ₱40–₱65 / serving</p>
-    <button type="button" data-open-recipe
-      class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
-      View Recipe
-    </button>
-  </div>
-</article>
+      <!--Recipe 15-->
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Ginisang Sayote with Century Tuna" data-category="veg" data-price="40–₱65"
+        data-ingredients="sayote tuna garlic onion tomato oil"
+        data-ingredients-list="1 medium sayote, peeled and sliced|1/2 can Century Tuna|2 cloves garlic, minced|1/4 pc onion, sliced|1 small tomato, chopped|1/2 cup water|Salt and pepper to taste|1 tbsp cooking oil"
+        data-steps="Heat oil in a pan and saute the garlic, onion, and tomato until softened.|Add the sliced sayote and stir-fry for 2–3 minutes.|Pour in the water and cover the pan.|Simmer for 5–8 minutes or until the sayote is tender.|Add the tuna and mix gently.|Season with salt and pepper, then cook for another 2 minutes.|Serve hot with rice."
+        data-note="Prices are estimates and vary by store and location.">
+        <img src="images/sayote_tuna.jpg" class="w-full h-50 object-cover rounded-2xl"
+          alt="Ginisang Sayote with Century Tuna">
+        <div class="flex flex-col flex-1">
+          <h3 class="text-xl font-bold mt-2 mb-2">Ginisang Sayote with Tuna</h3>
+          <p class="text-slate-800">Sample estimate: ₱40–₱65 / serving</p>
+          <button type="button" data-open-recipe
+            class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
+            View Recipe
+          </button>
+        </div>
+      </article>
 
 
-<!-- Recipe 16 -->
-<article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-  data-name="Tortang Sardinas" data-category="canned" data-price="35–₱55" data-ingredients="sardines egg onion flour oil"
-  data-ingredients-list="1 small can sardines|2 pcs eggs|1/4 pc onion, chopped|1 tbsp flour (optional)|Salt and pepper to taste|Cooking oil for frying"
-  data-steps="Drain some of the sardine sauce and mash the sardines in a bowl.|Add the eggs, chopped onion, flour, salt, and pepper, then mix well.|Heat a little cooking oil in a pan over medium heat.|Pour the mixture into the pan, forming one large omelette or several small patties.|Cook until golden brown, then carefully flip and cook the other side until fully set.|Serve hot with rice."
-  data-note="Prices are estimates and vary by store and location.">
-  <img src="images/tortang-sardinas.jpg" class="w-full h-50 object-cover rounded-2xl" alt="Tortang Sardinas">
-  <div class="flex flex-col flex-1">
-    <h3 class="text-xl font-bold mt-2 mb-2">Tortang Sardinas</h3>
-    <p class="text-slate-800">Sample estimate: ₱35–₱55 / serving</p>
-    <button type="button" data-open-recipe
-      class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
-      View Recipe
-    </button>
-  </div>
-</article>
+      <!-- Recipe 16 -->
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Tortang Sardinas" data-category="canned" data-price="35–₱55"
+        data-ingredients="sardines egg onion flour oil"
+        data-ingredients-list="1 small can sardines|2 pcs eggs|1/4 pc onion, chopped|1 tbsp flour (optional)|Salt and pepper to taste|Cooking oil for frying"
+        data-steps="Drain some of the sardine sauce and mash the sardines in a bowl.|Add the eggs, chopped onion, flour, salt, and pepper, then mix well.|Heat a little cooking oil in a pan over medium heat.|Pour the mixture into the pan, forming one large omelette or several small patties.|Cook until golden brown, then carefully flip and cook the other side until fully set.|Serve hot with rice."
+        data-note="Prices are estimates and vary by store and location.">
+        <img src="images/tortang-sardinas.jpg" class="w-full h-50 object-cover rounded-2xl" alt="Tortang Sardinas">
+        <div class="flex flex-col flex-1">
+          <h3 class="text-xl font-bold mt-2 mb-2">Tortang Sardinas</h3>
+          <p class="text-slate-800">Sample estimate: ₱35–₱55 / serving</p>
+          <button type="button" data-open-recipe
+            class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
+            View Recipe
+          </button>
+        </div>
+      </article>
 
-<!--Recipe 17-->
-<article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4" data-recipe-card
-  data-name="Adobong Itlog" data-category="egg" data-price="25–₱45" data-ingredients="egg garlic soy sauce vinegar bay leaf pepper oil"
-  data-ingredients-list="3 pcs eggs|3 cloves garlic, crushed|2 tbsp soy sauce|2 tbsp vinegar|1/2 cup water|1 bay leaf (optional)|Black pepper to taste|1 tsp cooking oil"
-  data-steps="Boil the eggs for 9–12 minutes, then cool and peel them.|Heat oil in a pan and saute the garlic until fragrant.|Add the soy sauce, vinegar, water, bay leaf, and black pepper.|Bring the mixture to a boil without stirring immediately after adding the vinegar.|Add the peeled eggs and simmer for 8–10 minutes, turning them occasionally.|Let the sauce reduce slightly.|Serve hot with rice."
-  data-note="Prices are estimates and vary by store and location.">
-  <img src="images/adobong_itlog.jpg" class="w-full h-50 object-cover rounded-2xl" alt="Adobong Itlog">
-  <div class="flex flex-col flex-1">
-    <h3 class="text-xl font-bold mt-2 mb-2">Adobong Itlog</h3>
-    <p class="text-slate-800">Sample estimate: ₱25–₱45 / serving</p>
-    <button type="button" data-open-recipe
-      class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
-      View Recipe
-    </button>
-  </div>
-</article>
+      <!--Recipe 17-->
+      <article class="bg-white surface shadow rounded-2xl overflow-hidden card-hover flex flex-col h-full p-4"
+        data-recipe-card data-name="Adobong Itlog" data-category="egg" data-price="25–₱45"
+        data-ingredients="egg garlic soy sauce vinegar bay leaf pepper oil"
+        data-ingredients-list="3 pcs eggs|3 cloves garlic, crushed|2 tbsp soy sauce|2 tbsp vinegar|1/2 cup water|1 bay leaf (optional)|Black pepper to taste|1 tsp cooking oil"
+        data-steps="Boil the eggs for 9–12 minutes, then cool and peel them.|Heat oil in a pan and saute the garlic until fragrant.|Add the soy sauce, vinegar, water, bay leaf, and black pepper.|Bring the mixture to a boil without stirring immediately after adding the vinegar.|Add the peeled eggs and simmer for 8–10 minutes, turning them occasionally.|Let the sauce reduce slightly.|Serve hot with rice."
+        data-note="Prices are estimates and vary by store and location.">
+        <img src="images/adobong_itlog.jpg" class="w-full h-50 object-cover rounded-2xl" alt="Adobong Itlog">
+        <div class="flex flex-col flex-1">
+          <h3 class="text-xl font-bold mt-2 mb-2">Adobong Itlog</h3>
+          <p class="text-slate-800">Sample estimate: ₱25–₱45 / serving</p>
+          <button type="button" data-open-recipe
+            class="mt-4 w-full font-medium text-center rounded-full p-2 border border-amber-900 cursor-pointer hover:bg-amber-700 hover:text-white">
+            View Recipe
+          </button>
+        </div>
+      </article>
 
     </div>
 
@@ -393,176 +396,135 @@
 
   </section>
 
-  <!-- Recipe modal -->
-  <div id="recipeModal" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/60 p-4" role="dialog"
-    aria-modal="true" aria-labelledby="modalTitle">
-    <div
-      class="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl bg-amber-50 p-6 shadow-xl [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-      <button type="button" id="closeRecipeModal" aria-label="Close recipe"
-        class="absolute top-3 right-4 text-3xl leading-none text-amber-900 cursor-pointer">&times;</button>
-
-      <h2 id="modalTitle" class="text-3xl font-bold text-amber-900 pr-8"></h2>
-      <p id="modalCost" class="mt-1 font-semibold text-amber-700"></p>
-
-      <h3 class="mt-5 mb-2 text-xl font-bold text-amber-950">Ingredients</h3>
-      <ul id="modalIngredients" class="list-disc pl-6 space-y-1 text-slate-800"></ul>
-
-      <h3 class="mt-5 mb-2 text-xl font-bold text-amber-950">Procedure</h3>
-      <ol id="modalSteps" class="list-decimal pl-6 space-y-2 text-slate-800"></ol>
-
-      <p id="modalNote" class="mt-5 text-sm italic text-slate-600"></p>
-    </div>
-  </div>
-
-
   <footer class="bg-orange-100 text-gray-900 border-t border-gray-200">
     <div class="max-w-7xl mx-auto px-6 md:px-10 py-10">
 
-        <!-- Footer Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-            <!-- Column 1: Logo and Description -->
-            <div class="space-y-4">
-                <a href="index.html"
-                   class="logo text-3xl text-amber-950 font-bold">
-                    MealMate</a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-                <p class="text-sm text-gray-600">
-                    Great food, small budget.
-                    Discover affordable and delicious meals
-                    for every day.
-                </p>
 
-                <!-- Social Media -->
-                <div class="pt-3">
-                    <p class="font-medium mb-3">Follow Us</p>
+        <div class="space-y-4">
+          <a href="index.html" class="logo text-3xl text-amber-950 font-bold">
+            MealMate</a>
 
-                    <div class="flex gap-5 text-gray-600">
-                        <a href="#" aria-label="Instagram"
-                           class="hover:text-orange-700 transition">
-                            <i class="fa-brands fa-instagram text-2xl"></i>
-                        </a>
+          <p class="text-sm text-gray-600">
+            Great food, small budget.
+            Discover affordable and delicious meals
+            for every day.
+          </p>
 
-                        <a href="#" aria-label="Facebook"
-                           class="hover:text-orange-700 transition">
-                            <i class="fa-brands fa-facebook-f text-2xl"></i>
-                        </a>
 
-                        <a href="#" aria-label="YouTube"
-                           class="hover:text-orange-700 transition">
-                            <i class="fa-brands fa-youtube text-2xl"></i>
-                        </a>
+          <div class="pt-3">
+            <p class="font-medium mb-3">Follow Us</p>
 
-                        <a href="#" aria-label="Pinterest"
-                           class="hover:text-orange-700 transition">
-                            <i class="fa-brands fa-pinterest-p text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="flex gap-5 text-gray-600">
+              <a href="#" aria-label="Instagram" class="hover:text-orange-700 transition">
+                <i class="fa-brands fa-instagram text-2xl"></i>
+              </a>
+
+              <a href="#" aria-label="Facebook" class="hover:text-orange-700 transition">
+                <i class="fa-brands fa-facebook-f text-2xl"></i>
+              </a>
+
+              <a href="#" aria-label="YouTube" class="hover:text-orange-700 transition">
+                <i class="fa-brands fa-youtube text-2xl"></i>
+              </a>
+
+              <a href="#" aria-label="Pinterest" class="hover:text-orange-700 transition">
+                <i class="fa-brands fa-pinterest-p text-2xl"></i>
+              </a>
             </div>
-
-            <!-- Column 2: Explore -->
-            <div>
-                <h3 class="font-bold text-lg mb-5">EXPLORE</h3>
-
-                <ul class="space-y-4 text-gray-700">
-                    <li>
-                        <a href="recipes.html"
-                           class="hover:text-orange-700 transition">
-                            All Recipes
-                        </a>
-                    </li>
-                    <li>
-                        <a href="recipes.html"
-                           class="hover:text-orange-700 transition">
-                            Quick & Easy
-                        </a>
-                    </li>
-                    <li>
-                        <a href="recipes.html"
-                           class="hover:text-orange-700 transition">
-                            Budget Meals
-                        </a>
-                    </li>
-                    <li>
-                        <a href="budget_planner.html"
-                           class="hover:text-orange-700 transition">
-                            Meal Budget Planner
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Column 3: MealMate -->
-            <div>
-                <h3 class="font-bold text-lg mb-5">MEALMATE</h3>
-
-                <ul class="space-y-4 text-gray-700">
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            Our Mission
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            Contact Us
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Helpful Links -->
-            <div>
-                <h3 class="font-bold text-lg mb-5">HELPFUL LINKS</h3>
-
-                <ul class="space-y-4 text-gray-700">
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            How It Works
-                        </a>
-                    </li>
-                    <li>
-                        <a href="budget_planner.html"
-                           class="hover:text-orange-700 transition">
-                            Save on Meals
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            FAQs
-                        </a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                           class="hover:text-orange-700 transition">
-                            Privacy Policy
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
+          </div>
         </div>
 
-        <!-- Bottom Footer -->
-        <div class="border-t border-amber-800 mt-10 pt-5
+        <!-- Column 2: Explore -->
+        <div>
+          <h3 class="font-bold text-lg mb-5">EXPLORE</h3>
+
+          <ul class="space-y-4 text-gray-700">
+            <li>
+              <a href="recipes.html" class="hover:text-orange-700 transition">
+                All Recipes
+              </a>
+            </li>
+            <li>
+              <a href="recipes.html" class="hover:text-orange-700 transition">
+                Quick & Easy
+              </a>
+            </li>
+            <li>
+              <a href="recipes.html" class="hover:text-orange-700 transition">
+                Budget Meals
+              </a>
+            </li>
+            <li>
+              <a href="budget_planner.html" class="hover:text-orange-700 transition">
+                Meal Budget Planner
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-5">MEALMATE</h3>
+
+          <ul class="space-y-4 text-gray-700">
+            <li>
+              <a href="about.html" class="hover:text-orange-700 transition">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-orange-700 transition">
+                Our Mission
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-orange-700 transition">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-5">HELPFUL LINKS</h3>
+
+          <ul class="space-y-4 text-gray-700">
+            <li>
+              <a href="about.html" class="hover:text-orange-700 transition">
+                How It Works
+              </a>
+            </li>
+            <li>
+              <a href="budget_planner.html" class="hover:text-orange-700 transition">
+                Save on Meals
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-orange-700 transition">
+                FAQs
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-orange-700 transition">
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-amber-800 mt-10 pt-5
                     flex flex-col sm:flex-row justify-between
                     items-center gap-3 text-sm text-amber-800">
-            <p>&copy; 2026 MealMate. All rights reserved.</p>
-            <p>Made with care for budget-friendly meals.</p>
-        </div>
+        <p>&copy; 2026 MealMate. All rights reserved.</p>
+        <p>Made with care for budget-friendly meals.</p>
+      </div>
 
     </div>
-</footer>
+  </footer>
 
 </body>
 

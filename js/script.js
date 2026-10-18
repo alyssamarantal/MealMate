@@ -54,55 +54,34 @@ document.addEventListener("DOMContentLoaded", () => {
   categoryFilter?.addEventListener("change", filterRecipes);
   filterRecipes();
 
+  
   // =====================================================
-  // 3. RECIPE MODAL
+  // 3. RECIPE DETAILS PAGE
   // =====================================================
-  const modal = document.querySelector("#recipeModal");
-
-  function openModal() {
-    modal.classList.remove("hidden");
-    modal.classList.add("flex");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeModal() {
-    if (!modal) return;
-    modal.classList.add("hidden");
-    modal.classList.remove("flex");
-    document.body.style.overflow = "";
-  }
-
-  // Turn "a|b|c" into list items inside a <ul> or <ol>.
-  function fillList(listEl, text) {
-    listEl.innerHTML = "";
-    (text || "").split("|").forEach(item => {
-      if (!item.trim()) return;
-      const li = document.createElement("li");
-      li.textContent = item.trim();
-      listEl.appendChild(li);
-    });
-  }
 
   document.querySelectorAll("[data-open-recipe]").forEach(button => {
     button.addEventListener("click", () => {
-      if (!modal) return;
-      const data = button.closest("[data-recipe-card]");
-      if (!data) return;
+      const card = button.closest("[data-recipe-card]");
+      if (!card) return;
 
-      document.querySelector("#modalTitle").textContent = data.dataset.name;
-      document.querySelector("#modalCost").textContent = `Estimated ulam cost: ₱${data.dataset.price} per serving`;
-      fillList(document.querySelector("#modalIngredients"), data.dataset.ingredientsList);
-      fillList(document.querySelector("#modalSteps"), data.dataset.steps);
-      document.querySelector("#modalNote").textContent =
-        data.dataset.note || "Prices are estimates and vary by store and location.";
+      // Get the recipe information from the card
+      const recipe = {
+        name: card.dataset.name || "",
+        price: card.dataset.price || "",
+        ingredients: card.dataset.ingredientsList || "",
+        steps: card.dataset.steps || "",
+        note: card.dataset.note || "",
+        image: card.querySelector("img")?.getAttribute("src") || ""
+      };
 
-      openModal();
+      // Save the selected recipe for the next page
+      sessionStorage.setItem("selectedRecipe", JSON.stringify(recipe));
+
+      // Open the separate recipe details page
+      window.location.href = "recipe_details.html";
     });
   });
 
-  document.querySelector("#closeRecipeModal")?.addEventListener("click", closeModal);
-  modal?.addEventListener("click", event => { if (event.target === modal) closeModal(); });
-  document.addEventListener("keydown", event => { if (event.key === "Escape") closeModal(); });
 
   // =====================================================
   // 4. CAROUSEL
